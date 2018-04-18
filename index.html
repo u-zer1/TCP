@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="content">
+    <h3>Таблица правил доступа</h3>
+      <table class="flat-table">
+        <tbody>
+          <tr>
+            <th colspan="2">отправитель</th>
+            <th colspan="2">получатель</th>
+            <th rowspan="2">Протокол</th>
+            <th rowspan="2">Флаг</th>
+            <th rowspan="2">Действия</th>
+          </tr>
+          <tr>
+            <th>IP</th>
+            <th>Порт</th>
+            <th>IP</th>
+            <th>Порт</th>
+          </tr>
+          <tr>
+            <td id="Loc_ipRecipient"> пусто </td>
+            <td id="Loc_portRecipient"> пусто </td>
+            <td id="Loc_ipSender"> пусто</td>
+            <td id="Loc_portSender"> пусто</td>
+            <td id="Loc_protocol"> пусто </td>
+            <td id="Loc_flag"> пусто </td>
+            <td>
+              <select id="Loc_access">
+                <option value="1">Разрешить</option>
+                <option value="2">Запретить</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td id="serv_ipSender">пусто</td>
+            <td id="serv_portSender">пусто</td>
+            <td id="serv_ipRecipient">пусто</td>
+            <td id="serv_portRecipient">пусто</td>
+            <td id="serv_protocol">пусто</td>
+            <td id="serv_flag"> пусто </td>
+            <td>
+              <select id="serv_access">
+                <option value="1">Разрешить</option>
+                <option value="2">Запретить</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Любой</td>
+            <td>Любой</td>
+            <td>Любой</td>
+            <td>Любой</td>
+            <td>Любой</td>
+            <td>Любой</td>
+            <td>
+              <select>
+                <option value="1">Запретить</option>
+                <option value="2">Разрешить</option>
+              </select>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="btns">
+        <button id="start" type="button" name="button">Start</button>
+        <button id="save" type="button" name="button" onClick="document.location.reload(true)">Refresh</button>
+      <div>
+    <div id="pc">
+      <img src="img/firewall.png" alt="Laptop">
+    </div>
+    <div id="firewall">
+      <h4>firewall</h4>
+      <img src="img/fw.png" alt="firewall">
+    </div>
+    <div id="internet">
+      <img src="img/net.png" alt="">
+    </div>
+    <div id="data">
+      <img src="img/yep.png" alt="" id="red">
+      <img src="img/nope.png" alt="" id="green">
+  </div>
+  </div>
+  <span id="loader"><span id="loader-inner"></span></span>
+  <script src="js/scripts.js"></script>
+</body>
+</html>
